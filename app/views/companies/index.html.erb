@@ -11,8 +11,7 @@
       <th>Country</th>
       <th>Models</th>
       <th>Model Count</th>
-      <th>Logo</th>
-      <th colspan="6"></th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -25,7 +24,6 @@
               <%= model.name %>
             <% end %></td>
         <td><%= company.models.count %></td>
-        <td><%= image_tag "#{company.logo}" %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
