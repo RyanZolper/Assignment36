@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -33,7 +34,7 @@ gem 'thin'
 gem 'faker', '~> 1.4.3'
 gem 'fog'
 gem 'carrierwave'
-gem 'dotenv-rails', :groups => [:development, :test]
+
 
 
 
