@@ -33,6 +33,7 @@ gem 'thin'
 gem 'faker', '~> 1.4.3'
 gem 'fog'
 gem 'carrierwave'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 
 

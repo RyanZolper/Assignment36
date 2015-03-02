@@ -66,6 +66,9 @@ GEM
     daemons (1.1.9)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
     eventmachine (1.0.7)
     excon (0.44.3)
@@ -267,6 +270,7 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
+  dotenv-rails
   faker (~> 1.4.3)
   fog
   jbuilder (~> 2.0)
