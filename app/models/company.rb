@@ -11,4 +11,5 @@
 
 class Company < ActiveRecord::Base
   has_many :models, dependent: :destroy
+  mount_uploader :logo, LogoUploader
 end
