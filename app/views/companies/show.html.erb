@@ -10,6 +10,11 @@
   <%= @company.country %>
 </p>
 
+<p>
+  <strong>Logo:</strong>
+  <%= image_tag "#{@company.logo}", width:300 %>
+</p>
+
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Add Models', new_model_path %>
 <%= link_to 'Back', companies_path %>
