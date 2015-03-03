@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :companies, :models, :configurations
+  get 'users/new'
+
+  resources :companies, :models, :configurations, :users
   root 'companies#index'
 
 

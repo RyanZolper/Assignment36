@@ -15,6 +15,7 @@ class CompaniesController < ApplicationController
   # GET /companies/new
   def new
     @company = Company.new
+
   end
 
   # GET /companies/1/edit
@@ -25,6 +26,7 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = Company.new(company_params)
+    @company.user_id = 1
 
     respond_to do |format|
       if @company.save
@@ -69,6 +71,6 @@ class CompaniesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
-      params.require(:company).permit(:name, :country, :logo)
+      params.require(:company).permit(:name, :country, :logo, :user_id)
     end
 end

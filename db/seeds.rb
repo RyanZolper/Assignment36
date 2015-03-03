@@ -8,3 +8,5 @@
 
 fakename = Faker::Company.name
 contact = Faker::Internet.email
+
+User.create(name: 'Guest', email: Faker::Internet.email)

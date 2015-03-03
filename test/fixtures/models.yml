@@ -7,7 +7,6 @@
 #  start_price :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  car_id      :integer
 #  company_id  :integer
 #
 
