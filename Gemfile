@@ -34,6 +34,7 @@ gem 'thin'
 gem 'faker', '~> 1.4.3'
 gem 'fog'
 gem 'carrierwave'
+gem 'activeadmin', github: 'activeadmin'
 
 
 
