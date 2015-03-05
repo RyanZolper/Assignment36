@@ -7,5 +7,6 @@ ActiveAdmin.register Model do
       li link_to "Companies",    admin_model_configurations_path(model)
     end
   end
+  scope :dreamcar
 
 end

@@ -13,4 +13,5 @@
 class Model < ActiveRecord::Base
   belongs_to :company, inverse_of: :models
   has_many :configurations, dependent: :destroy
+  scope :dreamcar, -> { where(name: 'nsx')}
 end

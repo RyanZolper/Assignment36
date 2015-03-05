@@ -15,4 +15,7 @@ class Company < ActiveRecord::Base
   belongs_to :user, inverse_of: :companies
   has_many :models, dependent: :destroy
   mount_uploader :logo, LogoUploader
+  scope :best, -> { where(country: 'germany')}
+  scope :domestic, -> { where(country: 'usa')}
+
 end

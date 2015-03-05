@@ -7,6 +7,6 @@ ActiveAdmin.register Company do
       li link_to "Models",    admin_company_models_path(company)
     end
   end
-
+  scope :best, :domestic
 
 end
