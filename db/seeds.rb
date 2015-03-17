@@ -11,6 +11,8 @@ contact = Faker::Internet.email
 
 User.create(name: 'Guest', email: Faker::Internet.email)
 
-@fakecomp = Company.create(name: Faker::Company.name, country: 'Afghanistan', user_id: 24, remote_logo_url: 'http://d1bibpzgs6p18f.cloudfront.net/public_artwork/designofpro/745494/thumb/ferari-mustang.jpg')
-@musteng = @fakecomp.models.create(name: 'musssteng', start_price: '$73 million')
-@musteng.configurations.create(name: 'supah musteng', start_price: '$74 million')
+20.times do
+  @fakecomp = Company.create(name: Faker::Company.name, country: Faker::Address.country, user_id: Faker::Number.number(2), remote_logo_url: Faker::Company.logo)
+  @musteng = @fakecomp.models.create(name: Faker::Name.first_name, start_price: "$#{Faker::Number.number(5)}")
+  @musteng.configurations.create(name: Faker::Name.first_name, start_price: "$#{Faker::Number.number(5)}")
+end
