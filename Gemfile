@@ -37,7 +37,7 @@ gem 'fog'
 gem 'carrierwave'
 gem 'activeadmin', github: 'activeadmin'
 
-
+gem 'country_select', github: 'stefanpenner/country_select'
 
 
 # Use Unicorn as the app server
