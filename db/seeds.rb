@@ -9,10 +9,10 @@
 fakename = Faker::Company.name
 contact = Faker::Internet.email
 
-User.create(name: 'Guest', email: Faker::Internet.email)
+@guest = User.create(name: 'Guest', email: Faker::Internet.email)
 
 20.times do
-  @fakecomp = Company.create(name: Faker::Company.name, country: Faker::Address.country, user_id: Faker::Number.number(2), remote_logo_url: Faker::Company.logo)
+  @fakecomp = @guest.companies.create(name: Faker::Company.name, country: Faker::Address.country, remote_logo_url: Faker::Company.logo)
   @musteng = @fakecomp.models.create(name: Faker::Name.first_name, start_price: "$#{Faker::Number.number(5)}")
   @musteng.configurations.create(name: Faker::Name.first_name, start_price: "$#{Faker::Number.number(5)}")
 end

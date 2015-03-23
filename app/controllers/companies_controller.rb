@@ -4,7 +4,7 @@ class CompaniesController < ApplicationController
   # GET /companies
   # GET /companies.json
   def index
-    @companies = Company.all
+    @companies = @current_user.companies.all
   end
 
   # GET /companies/1
@@ -25,8 +25,8 @@ class CompaniesController < ApplicationController
   # POST /companies
   # POST /companies.json
   def create
-    @company = Company.new(company_params)
-    @company.user_id = 1
+    @company = @current_user.companies.new(company_params)
+
 
     respond_to do |format|
       if @company.save
